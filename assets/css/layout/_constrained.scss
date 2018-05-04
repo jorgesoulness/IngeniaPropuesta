@@ -1,0 +1,266 @@
+/* ==|====================
+   Layout/Constrained
+   ======================= */
+
+@mixin margenLeft($mar) {
+    margin-left: $mar;
+}
+
+[class^="l-contenedor"] {
+    &:before,
+    &:after {
+        display: table;
+        content: '';
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.l-contenedor {
+    max-width: $wrapper-width;
+    padding: 0 em(15, 16);
+    margin: 0 auto;
+}
+
+.l-contenedor-fluido {
+    padding: 0 em(15, 16);
+    margin: 0 auto;
+}
+
+[class^="bc-"] {
+    display: block;
+    float: left;
+    @include padding(null 0 null 0);
+    @include margin(null 0 null 0);
+    position: inherit;
+    &.off-m-0,
+    &.off-tm-0,
+    &.off-t-0,
+    &.off-d-0 {
+        margin-left: 0!important;
+    }
+}
+
+$w100: 100%;
+$w90: 90%;
+$w80: 80%;
+$w66: 66.66666667%;
+$w50: 50%;
+$w33: 33.333333333%;
+$w25: 25%;
+$w20: 20%;
+$w10: 10%;
+.bc-large {
+    width: $w100;
+}
+
+.bc-m-11 {
+    width: $w90;
+    &.off-m-11 {
+        @include margenLeft($w10);
+    }
+}
+
+.bc-m-10 {
+    width: $w80;
+    &.off-m-10 {
+        @include margenLeft($w10);
+    }
+}
+
+.bc-m-8 {
+    width: $w66;
+    &.off-m-8 {
+        @include margenLeft($w20);
+    }
+}
+
+.bc-m-6 {
+    width: $w50;
+    &.off-m-6 {
+        @include margenLeft($w25);
+    }
+}
+
+.bc-m-4 {
+    width: $w33;
+    &.off-m-4 {
+        @include margenLeft($w33);
+    }
+}
+
+.bc-m-3 {
+    width: $w25;
+    &.off-m-3 {
+        @include margenLeft($w25);
+    }
+}
+
+.bc-m-2 {
+    width: $w20;
+    &.off-m-2 {
+        @include margenLeft($w20);
+    }
+}
+
+.bc-m-1 {
+    width: $w10;
+    &.off-m-1 {
+        @include margenLeft($w10);
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .bc-tm-11 {
+        width: $w90;
+        &.off-d-11 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-tm-10 {
+        width: $w80;
+        &.off-tm-10 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-tm-8 {
+        width: $w66;
+        &.off-tm-8 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-tm-6 {
+        width: $w50;
+        &.off-tm-6 {
+            @include margenLeft($w25);
+        }
+    }
+    .bc-tm-4 {
+        width: $w33;
+        &.off-tm-4 {
+            @include margenLeft($w33);
+        }
+    }
+    .bc-tm-3 {
+        width: $w25;
+        &.off-tm-3 {
+            @include margenLeft($w25);
+        }
+    }
+    .bc-tm-2 {
+        width: $w20;
+        &.off-tm-2 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-tm-1 {
+        width: $w10;
+        &.off-tm-1 {
+            @include margenLeft($w10);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .bc-t-11 {
+        width: $w90;
+        &.off-d-11 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-t-10 {
+        width: $w80;
+        &.off-t-10 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-t-8 {
+        width: $w66;
+        &.off-t-8 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-t-6 {
+        width: $w50;
+        &.off-t-6 {
+            @include margenLeft($w25);
+        }
+    }
+    .bc-t-4 {
+        width: $w33;
+        &.off-t-4 {
+            @include margenLeft($w33);
+        }
+    }
+    .bc-t-3 {
+        width: $w25;
+        &.off-t-3 {
+            @include margenLeft($w25);
+        }
+    }
+    .bc-t-2 {
+        width: $w20;
+        &.off-t-2 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-t-1 {
+        width: $w10;
+        &.off-t-1 {
+            @include margenLeft($w10);
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .bc-d-11 {
+        width: $w90;
+        &.off-d-11 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-d-10 {
+        width: $w80;
+        &.off-d-10 {
+            @include margenLeft($w10);
+        }
+    }
+    .bc-d-8 {
+        width: $w66;
+        &.off-d-8 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-d-6 {
+        width: $w50;
+        &.off-d-6 {
+            @include margenLeft($w25);
+            top: 0;
+        }
+    }
+    .bc-d-4 {
+        width: $w33;
+        &.off-d-4 {
+            @include margenLeft($w33);
+        }
+    }
+    .bc-d-3 {
+        width: $w25;
+        &.off-d-3 {
+            @include margenLeft($w25);
+        }
+    }
+    .bc-d-2 {
+        width: $w20;
+        &.off-d-2 {
+            @include margenLeft($w20);
+        }
+    }
+    .bc-d-1 {
+        width: $w10;
+        &.off-d-1 {
+            @include margenLeft($w10);
+        }
+    }
+}

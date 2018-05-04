@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PruebaFront</title>
+    <meta name="keywords" content="prueba, front, ingenia">
+    <meta name="description" content="Prueba Frontend">
+    <meta name="author" content="Jorge Malagón">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+</head>
+
+<body onload="Captcha()">
+    <header class="l-header">
+        <div class="l-contenedor-fluido">
+            <div class="bc-d-2 bc-t-2 bc-tm-2 bc-m-4">
+                <div class="brand-site">
+                    <a href="">
+                        <img src="assets/img/Logo_ingenia.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="bc-d-10 bc-t-10 bc-tm-10 bc-m-8">
+                <div class="bc-d-11 bc-t-10 bc-tm-10 bc-m-6">
+                    <nav id="menuPrin" class="l-nav">
+                        <div class="closeCont">
+                            <button type="button" onclick="cierraMenu()"><i class="fa fa-times"></i></button>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Ingénia</a>
+                            </li>
+                            <li>
+                                <a href="">Beneficios</a>
+                            </li>
+                            <li>
+                                <a href="">Vacantes</a>
+                            </li>
+                            <li>
+                                <a href="">Aplica ahora</a>
+                            </li>
+                            <li class="active">
+                                <a href="">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button onclick="abreMenu()" type="button" class="btMenuMobile"><i class="fa fa-bars"></i></button>
+                </div>
+                <div class="bc-d-1 bc-t-2 bc-tm-2 bc-m-6">
+                    <div class="box-sociales">
+                        <a href="" class="bt facebook" title=""><i class="fab fa-facebook-f"></i></a>
+                        <a href="" class="bt twitter" title=""><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="l-main">
+        <div class="l-contenedor">
+            <div class="bc-large">
+                <article class="main-article">
+                    <div class="article-title">
+                        <h1>Contacto</h1>
+                        <p>Debes llenar los campos para enviar el formulario</p>
+                    </div>
+                    <form action="" method="post" validate="">
+                        <div id="error" class="error-cont"></div>
+                        <div class="bc-d-6 off-d-6">
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                            <input type="mail" name="email" id="email" placeholder="Correo electrónico">
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            <fieldset class="cpacthaForm">
+                                <h3 id="txtCaptcha"></h3>
+                                <button type="button" id="refresh" onclick="Captcha()" class="refBtn"><i class="fa fa-retweet"></i></button>
+                                <input type="text" id="txtInput" placeholder="Ingresa el captcha">
+                            </fieldset>
+                            <button id="enviar" type="submit" onclick="return validaForm()">Enviar</button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="l-footer">
+        <div class="l-contenedor-fluido">
+            <div class="bc-large copyright">
+                <p>Ingenia Group | México 2018 | Todos los Derechos Reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bodyPerson"></div>
+
+    <script src="assets/js/main.min.js"></script>
+
+</body>
+
+</html>

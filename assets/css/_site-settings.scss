@@ -1,0 +1,32 @@
+@charset "UTF-8";
+// ----------------------
+// == Site settings
+// ----------------------
+// Fonts
+$fontsurl: '../fonts/';
+@include font-face("halogenregular", "#{$fontsurl}HalogenOT/halogen-webfont", $file-formats: eot woff ttf svg);
+@include font-face("talking_to_the_moonregular", "#{$fontsurl}TalkingToTheMoon/talkingtothemoon-webfont", $file-formats: eot woff ttf svg);
+@include font-face("verdana", "#{$fontsurl}Verdana/Verdana", $file-formats: ttf);
+$font1: "halogenregular";
+$font2: "talking_to_the_moonregular";
+$font3: "verdana";
+// = Colors
+// -----------------------------
+// Graphic chart
+$gray-1: #efefef;
+$gray-2: #d9d9d9;
+$gray-3: #adadad;
+$gray-4: #696969;
+$gray-5: #292929;
+$nar-1: #c88e60;
+$nar-2: #dca87d;
+$nar-3: #956b49;
+$black: #000000;
+$white: #ffffff;
+$facebook: #3b5998;
+$twitter: #43bfe1;
+$fondo: $gray-4;
+// = Grid
+// -----------------------------
+// Max width wrapper
+$wrapper-width: em(1000, 16);

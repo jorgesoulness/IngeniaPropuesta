@@ -1,0 +1,146 @@
+    /* ==|====================
+   Layout/Nav
+   ======================= */
+    
+    .l-nav {
+        width: auto;
+        float: right;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                list-style-type: none;
+                display: inline-block;
+                @include padding(20px 15px);
+                margin: 0;
+                background: transparent;
+                @include transition(all 0.3s ease-in-out);
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 14px;
+                }
+                &:hover {
+                    background: $nar-1;
+                }
+                &.active {
+                    background: $nar-1;
+                }
+            }
+        }
+    }
+    
+    .btMenuMobile {
+        display: block;
+        background: $nar-1;
+        color: $white;
+        width: 40px;
+        height: 40px;
+        border: none;
+        @include margin(5px 0 5px auto);
+        padding: 0;
+        cursor: pointer;
+        @include border-top-radius(50%);
+        @include border-bottom-radius(50%);
+        @include transition(all 0.3s ease);
+        &:hover {
+            background: $nar-3;
+        }
+    }
+    
+    .hide {
+        display: none;
+        opacity: 0;
+        @include transition(opacity 0.3s ease);
+    }
+    
+    .closeCont {
+        display: none;
+    }
+    
+    .contMenuMobile {
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include position(absolute, 0 null null 0);
+        background: rgba(0, 0, 0, 0.87);
+        z-index: 100;
+        opacity: 1;
+        @include transition(opacity 0.3s ease);
+        .closeCont {
+            width: 100%;
+            height: auto;
+            margin: 10px 0 0 0;
+            padding: 0;
+            text-align: center;
+            display: block;
+            button {
+                display: inline-block;
+                background: $nar-1;
+                color: $white;
+                width: 40px;
+                height: 40px;
+                border: none;
+                @include margin(0);
+                padding: 0;
+                cursor: pointer;
+                @include border-top-radius(50%);
+                @include border-bottom-radius(50%);
+                @include transition(all 0.3s ease);
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        ul {
+            margin-top: 30px;
+            li {
+                display: block;
+                text-align: center;
+                a {}
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 480px) {}
+    
+    @media only screen and (min-width: 640px) {}
+    
+    @media only screen and (min-width: 768px) {
+        .l-nav {
+            float: right;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    @include padding(20px 10px);
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .btMenuMobile {
+            display: none;
+        }
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        .l-nav {
+            float: right;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    @include padding(20px 15px);
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }

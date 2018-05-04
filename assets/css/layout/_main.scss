@@ -1,0 +1,175 @@
+/* ==|====================
+   Layout/Main
+   ======================= */
+
+.l-main {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 50px 0 60px 0;
+    position: relative;
+    @include box-sizing(border-box);
+    z-index: 2;
+}
+
+.main-article {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+    @include box-sizing(border-box);
+    position: relative;
+    background: $gray-5;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.70);
+}
+
+.article-title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    @include margin(10px 0 20px 0);
+    padding: 0;
+    h1 {
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        color: $white;
+    }
+    p {
+        color: $white;
+    }
+}
+
+.error-cont {
+    width: 50%;
+    height: auto;
+    background: #e29090;
+    color: $white;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding: 0;
+    @include border-top-radius(6px);
+    @include border-bottom-radius(6px);
+    p {
+        padding: 5px 0 5px 0;
+        font-size: 80%;
+    }
+}
+
+form {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    @include box-sizing(border-box);
+    &:before,
+    &:after {
+        display: table;
+        content: '';
+    }
+    &:after {
+        clear: both;
+    }
+    input[type="text"],
+    input[type="mail"] {
+        width: 100%;
+        height: 35px;
+        position: relative;
+        margin: 0 0 10px 0;
+        padding: 5px 10px;
+        border: 1px solid $gray-1;
+        background: $gray-4;
+        @include border-top-radius(6px);
+        @include border-bottom-radius(6px);
+        color: $white;
+        @include box-sizing(border-box);
+        @include transition(all 0.3s ease);
+        @include placeholder {
+            color: $nar-2;
+        }
+        &:focus {
+            border: 1px solid $nar-1;
+        }
+    }
+    textarea {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin: 0 0 10px 0;
+        padding: 5px 10px;
+        border: 1px solid $gray-1;
+        background: $gray-4;
+        @include border-top-radius(6px);
+        @include border-bottom-radius(6px);
+        color: $white;
+        @include box-sizing(border-box);
+        @include transition(all 0.3s ease);
+        @include placeholder {
+            color: $nar-2;
+        }
+        &:focus {
+            border: 1px solid $nar-1;
+        }
+    }
+    fieldset {
+        width: 100%;
+        height: auto;
+        @include margin(0 0 10px 0);
+        padding: 0;
+        border: none;
+        &.cpacthaForm {
+            width: 80%;
+            @include margin(null auto null auto);
+            background: $gray-2;
+            @include box-sizing(border-box);
+            @include border-top-radius(6px);
+            @include border-bottom-radius(6px);
+            padding: 10px 10px;
+            text-align: center;
+            position: relative;
+            h3 {
+                font-family: $font3;
+            }
+            input {
+                margin: 0;
+            }
+            .refBtn {
+                display: block;
+                background: $nar-1;
+                color: $white;
+                width: 32px;
+                height: 32px;
+                border: none;
+                @include margin(5px 0 5px auto);
+                padding: 0;
+                cursor: pointer;
+                @include border-top-radius(50%);
+                @include border-bottom-radius(50%);
+                @include transition(all 0.3s ease);
+                font-weight: bold;
+                @include position(absolute, 0 5px null null);
+                &:hover {
+                    background: $nar-3;
+                }
+            }
+        }
+    }
+    button[type="submit"] {
+        display: block;
+        background: $nar-1;
+        color: $white;
+        width: 100%;
+        height: 40px;
+        border: none;
+        @include margin(5px 0 5px auto);
+        padding: 0;
+        cursor: pointer;
+        @include border-top-radius(10px);
+        @include border-bottom-radius(10px);
+        @include transition(all 0.3s ease);
+        font-weight: bold;
+        &:hover {
+            background: $nar-3;
+        }
+    }
+}

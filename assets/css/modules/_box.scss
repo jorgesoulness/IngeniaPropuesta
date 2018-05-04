@@ -1,0 +1,75 @@
+/* ==|====================
+   Module/Box
+   ======================= */
+
+.brand-site {
+    width: auto;
+    height: auto;
+    margin: 5px 0 0 0;
+    padding: 0;
+    a {
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+        }
+    }
+}
+
+.box-sociales {
+    width: auto;
+    position: relative;
+    height: auto;
+    @include margin(8px 0 10px 0);
+    padding: 0;
+    text-align: right;
+    float: right;
+    .bt {
+        color: $white;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        @include border-top-radius(4px);
+        @include border-bottom-radius(4px);
+        text-align: center;
+        line-height: 32px;
+        &.facebook {
+            background: $facebook;
+        }
+        &.twitter {
+            background: $twitter;
+        }
+        &:hover {
+            background: $white;
+            &.facebook {
+                color: $facebook;
+            }
+            &.twitter {
+                color: $twitter;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {}
+
+@media only screen and (min-width: 640px) {}
+
+@media only screen and (min-width: 768px) {
+    .box-sociales {
+        @include margin(12px 0 10px 0);
+    }
+    .brand-site {
+        margin: 8px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .brand-site {
+        margin: 10px 0 0 0;
+    }
+    .box-sociales {
+        @include margin(10px 0 10px 0);
+    }
+}

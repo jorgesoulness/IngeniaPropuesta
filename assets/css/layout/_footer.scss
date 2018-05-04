@@ -1,0 +1,25 @@
+/* ==|====================
+   Layout/Footer
+   ======================= */
+
+.l-footer {
+    width: 100%;
+    height: auto;
+    @include position(fixed, null null 0 0);
+    padding: 10px 0;
+    margin: 0;
+    @include box-sizing(border-box);
+    background: $gray-5;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.50);
+    z-index: 2;
+}
+
+.copyright {
+    text-align: center;
+    p {
+        font-size: 80%;
+        color: $gray-1;
+        padding: 0;
+        margin: 0;
+    }
+}
